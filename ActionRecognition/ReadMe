@@ -1,3 +1,6 @@
 To check actions of humans
 Open Main.py code and in main() enter the name of the desired video
 save and then run Main.py
+
+
+To train your own data use testing.ipynb file and train your model according to it
