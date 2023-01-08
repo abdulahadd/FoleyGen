@@ -25,24 +25,6 @@ import cv2
 import pickle
 
 
-# BLACK = (0.0, 0.0, 0.0)
-# WHITE = (255.0, 255.0, 255.0)
-# YELLOW = (0.0, 255.0, 255.0)
-# GREEN = (0.0, 255.0, 0.0)
-# RED = (0.0, 0.0, 255.0)
-
-# # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< GUI >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-# def drawRedRectangleAroundPlate(imgOriginalScene, licPlate):
-#     p2fRectPoints = cv2.boxPoints(licPlate.rrLocationOfPlateInScene)            # get 4 vertices of rotated rect
-#     p2fRectPoints = p2fRectPoints.astype(int)
-#     cv2.line(imgOriginalScene, tuple(p2fRectPoints[0]), tuple(p2fRectPoints[1]), GREEN, 2)         # draw 4 red lines
-#     cv2.line(imgOriginalScene, tuple(p2fRectPoints[1]), tuple(p2fRectPoints[2]), GREEN, 2)
-#     cv2.line(imgOriginalScene, tuple(p2fRectPoints[2]), tuple(p2fRectPoints[3]), GREEN, 2)
-#     cv2.line(imgOriginalScene, tuple(p2fRectPoints[3]), tuple(p2fRectPoints[0]), GREEN, 2)
-# import cv2
-
-
 def generate_Action(loc):
     cap = cv2.VideoCapture(loc)
 
@@ -135,39 +117,9 @@ def generate_Action(loc):
         return "Walking"
 
 
- 
-
-
-# def upload_file(my_w,my_font1):
-#     f_types = [('MP4 Files','*.mp4')]   # type of files to select 
-#     f_name = tk.filedialog.askopenfilename(filetypes=f_types)
-    
-#     predict="Waiting"
-
-#     l3 = tk.Label(my_w,text='Action is : ' + predict,width=30,font=my_font1)  
-#     l3.grid(row=7,column=1,columnspan=4)
-
-#     predict = generate_Action(f_name)
-    
-#     l3 = tk.Label(my_w,text='Action is : ' + predict,width=30,font=my_font1)  
-#     l3.grid(row=7,column=1,columnspan=4)
-
-
-
-
 
 def main():
     
-    # my_w = tk.Tk()
-    # my_w.geometry("410x700")  # Size of the window 
-    # my_w.title('Action Detection')
-    # my_font1=('times', 18, 'bold')
-    # l1 = tk.Label(my_w,text='Upload Video',width=30,font=my_font1)  
-    # l1.grid(row=1,column=1,columnspan=4)
-    # b1 = tk.Button(my_w, text='Upload',width=20,command = lambda:upload_file(my_w,my_font1))
-    # b1.grid(row=2,column=1,columnspan=4)
-    # my_w.mainloop()  # Keep the window open
-
     predict = generate_Action("walking.mp4")
     print(predict)
 
