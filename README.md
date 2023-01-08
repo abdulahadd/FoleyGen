@@ -23,6 +23,7 @@ You may also see any lint errors in the console.
 ## Object Detection
 
 We have used yoloV7 model of https://github.com/WongKinYiu/yolov7
+
 @article{wang2022yolov7,
   title={{YOLOv7}: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors},
   author={Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
